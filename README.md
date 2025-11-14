@@ -17,12 +17,13 @@ Open http://localhost:3000 to start calculating.
 - Logarithms (log, ln), square roots, exponentials, absolute values, and power shortcuts
 - Keyboard support for numbers, operators, parentheses, Enter/Backspace/Escape
 - Inline evaluation errors with helpful messaging
+- `/notes` workspace for creating, editing, and deleting locally stored notes with a clean two-column layout and friendly timestamps
 
 ## Testing
 
 ```bash
 npm run lint   # ESLint
-npm test       # Vitest unit tests for the calculator engine
+npm test       # Vitest unit tests for the calculator engine and notes utilities
 ```
 
-The Vitest suite validates the expression evaluator, constants, and angle-mode handling so the UI can trust the results it renders.
+The Vitest suite validates the expression evaluator, constants, angle-mode handling, and the pure helpers that power the notes experience (creation, updates, sorting, and persistence parsing).

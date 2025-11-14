@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { ScientificCalculator } from "@/components/calculator/scientific-calculator";
 
 export default function Home() {
@@ -10,6 +12,15 @@ export default function Home() {
           live previews. Use the DEG/RAD toggle when working with angles or plug in constants such as
           π, τ, and e directly from the keypad.
         </aside>
+        <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-slate-200 bg-white/80 p-4 text-sm text-slate-600">
+          <span>Need a lightweight workspace for your ideas?</span>
+          <Link
+            href="/notes"
+            className="rounded-full bg-slate-900 px-4 py-2 font-semibold text-white transition hover:bg-slate-700"
+          >
+            Open Notes
+          </Link>
+        </div>
       </main>
     </div>
   );
