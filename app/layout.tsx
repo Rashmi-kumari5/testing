@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Asama · NTS High Priority",
-  description: "Live view of every high priority task on the NTS board.",
+  title: "Aurora · Scientific Calculator",
+  description: "Advanced calculator for trigonometry, logarithms, powers, and constants.",
 };
 
 export default function RootLayout({

@@ -1,8 +1,6 @@
-# Asama · NTS High Priority
+# Aurora · Scientific Calculator
 
-A lightweight Next.js dashboard that lists every high-priority task on the Asama `NTS`
-board. The page fetches live data when the Asama API is available and falls back to the
-latest committed snapshot so that product reviews and demos always have useful content.
+Aurora is a sleek Next.js app that delivers a complete scientific calculator experience in the browser. It evaluates complex expressions backed by `mathjs`, supports trigonometry in degrees or radians, exposes constants such as π/τ/e, and streams live previews while you type.
 
 ## Getting started
 
@@ -11,23 +9,20 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000 to see the board.
+Open http://localhost:3000 to start calculating.
 
-## Configuration
+## Features
 
-| Variable | Purpose |
-| --- | --- |
-| `ASAMA_API_BASE_URL` | Base URL of the Asama API (e.g. `https://example.com/api`). When omitted, the UI automatically uses the snapshot stored in `data/asama/nts-board.json`. |
-| `ASAMA_BOARD_ID` | (Optional) Override the board key. Defaults to `NTS`. |
-
-Both variables can be added to a `.env.local` file.
+- DEG/RAD angle toggle that updates trig and inverse-trig functions on the fly
+- Logarithms (log, ln), square roots, exponentials, absolute values, and power shortcuts
+- Keyboard support for numbers, operators, parentheses, Enter/Backspace/Escape
+- Inline evaluation errors with helpful messaging
 
 ## Testing
 
 ```bash
 npm run lint   # ESLint
-npm test       # Vitest unit tests for the data normalisers
+npm test       # Vitest unit tests for the calculator engine
 ```
 
-The Vitest suite focuses on the parsing logic that needs to behave consistently across
-different payload shapes.
+The Vitest suite validates the expression evaluator, constants, and angle-mode handling so the UI can trust the results it renders.
